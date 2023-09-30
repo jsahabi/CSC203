@@ -1,0 +1,52 @@
+java.util.List;
+import java.util.ArrayList;
+
+public class Lab01 {
+    public static int count(String s, char c) {
+        int sum = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == c) {
+                sum++;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        // numerics
+        int x = 2;
+        double y = 4.0;
+        double z = x * y / 3;
+
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
+        System.out.println("z: " + z);
+    }
+
+    {
+        int[] a = {1, 2, 3, 4};
+        for (int i: a) {
+            System.out.println(i + " ");
+        }
+
+        // String
+        {
+            String b = "mochimochimochi";
+            int found = count(b, 'o');
+            System.out.print(found);
+        }
+
+        int count = 0;
+
+        // Variable sized list
+
+        List<Double> doublesArrayList = new ArrayList<>();
+        doublesArrayList.add(6.5);
+        doublesArrayList.add(4.3);
+        doublesArrayList.add(2.1);
+        for (int i = 0; i < doublesArrayList.size(); i++) {
+            System.out.println(i + ": " + doublesArrayList.get(i));
+        }
+    }
+
+}
